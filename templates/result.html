@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="result-card">
+
+        <div class="result-icon">
+            <span class="material-icons">emoji_events</span>
+        </div>
+
+        <h2>Your Predicted Score</h2>
+
+        <div class="score">{{ prediction }}</div>
+
+        <div class="score-bar">
+            <div class="score-fill" style="width: prediction "></div>
+        </div>
+
+        <p class="result-message">Keep up the great work!</p>
+
+        <br>
+
+        <a href="/" class="predict-btn">
+            Go Back
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

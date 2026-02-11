@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="background-shapes">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+</div>
+
+<div class="container">
+    
+    <div class="header">
+        <div class="logo-container">
+            <div class="logo">
+                <span class="material-icons">school</span>
+            </div>
+        </div>
+        <h1>Student Performance Predictor</h1>
+        <p class="subtitle">Enter your details to predict your exam score</p>
+    </div>
+
+    <form action="/predict" method="POST" class="prediction-form">
+
+        <div class="form-grid">
+            
+            <div class="input-group">
+                <label for="age">
+                    <span class="material-icons label-icon">person</span>
+                    Age
+                </label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" 
+                       min="10" max="100" required>
+            </div>
+
+            <div class="input-group">
+                <label for="study">
+                    <span class="material-icons label-icon">menu_book</span>
+                    Study Hours/Day
+                </label>
+                <input type="number" id="study" step="0.1" name="study"
+                       placeholder="Hours per day" min="0" max="24" required>
+            </div>
+
+            <div class="input-group">
+                <label for="social">
+                    <span class="material-icons label-icon">phone_android</span>
+                    Social Media Hours
+                </label>
+                <input type="number" id="social" step="0.1" name="social"
+                       placeholder="Hours per day" min="0" max="24" required>
+            </div>
+
+            <div class="input-group">
+                <label for="netflix">
+                    <span class="material-icons label-icon">live_tv</span>
+                    Netflix Hours
+                </label>
+                <input type="number" id="netflix" step="0.1" name="netflix"
+                       placeholder="Hours per day" min="0" max="24" required>
+            </div>
+
+            <div class="input-group">
+                <label for="attendance">
+                    <span class="material-icons label-icon">check_circle</span>
+                    Attendance %
+                </label>
+                <input type="number" id="attendance" step="0.1" name="attendance"
+                       placeholder="Percentage" min="0" max="100" required>
+            </div>
+
+            <div class="input-group">
+                <label for="sleep">
+                    <span class="material-icons label-icon">bedtime</span>
+                    Sleep Hours
+                </label>
+                <input type="number" id="sleep" step="0.1" name="sleep"
+                       placeholder="Hours per night" min="0" max="24" required>
+            </div>
+
+            <div class="input-group">
+                <label for="exercise">
+                    <span class="material-icons label-icon">fitness_center</span>
+                    Exercise Frequency
+                </label>
+                <input type="number" id="exercise" name="exercise"
+                       placeholder="Times per week" min="0" max="14" required>
+            </div>
+
+            <div class="input-group">
+                <label for="mental">
+                    <span class="material-icons label-icon">psychology</span>
+                    Mental Health Rating
+                </label>
+                <input type="number" id="mental" name="mental"
+                       placeholder="1-10 scale" min="1" max="10" required>
+            </div>
+
+        </div>
+
+        <button type="submit" class="predict-btn">
+            <span class="btn-text" onclick="result.html">Predict My Score</span>
+            <span class="material-icons btn-icon">arrow_forward</span>
+        </button>
+
+    </form>
+    
+
+
+
+</div>
+
+</body>
+</html>
